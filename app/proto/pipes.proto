@@ -1,0 +1,7 @@
+syntax = "proto3";
+package appTypes;
+option go_package = "app/types";
+
+message Pipe{
+    double value =1;
+}

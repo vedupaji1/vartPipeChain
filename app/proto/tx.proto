@@ -1,0 +1,17 @@
+syntax = "proto3";
+package appTypes;
+option go_package = "app/types";
+
+import "app/proto/pipes.proto";
+
+message TransferPipesPayload{
+    bytes from =1;
+    bytes to =2;
+    Pipe amount=3;
+    uint32 sequence=4;
+}
+
+message TransferPipes{
+    TransferPipesPayload payload=1;
+    bytes signature=2;
+}
